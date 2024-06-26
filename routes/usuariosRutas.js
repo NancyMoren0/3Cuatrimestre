@@ -28,12 +28,12 @@ ruta.post("/agregarUsuario",(req, res)=>{
     else{
         res.render("error"); 
     }
-})
+});
 
 ruta.get("/agregarUsuario",(req,res)=>{
     res.render("formulario");
 
-})
+});
 
 
 
@@ -61,7 +61,7 @@ ruta.post("/editar",async(req,res)=>{
     } catch (error) {
         console.log("Error al editar el usuario");
     }
-})
+});
 
 ruta.get("/BorrarUsuario/:id",async(req,res)=>{
     try {
@@ -74,4 +74,4 @@ ruta.get("/BorrarUsuario/:id",async(req,res)=>{
 });
 
 
-module.exports=ruta;//exportar una variable en este caso ruta.
+module.exports=ruta;
