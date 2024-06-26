@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    margin-top: 20px;
+    width: 300px;
+    box-shadow: 0 0 12px rgb(91, 90, 197);
+    padding: 30px;
+    border-radius: 7px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin-bottom: 15px;
+    margin-top: 5px;
+    padding: 7px;
+    background-color: rgb(206, 230, 225);
+    border: 0px;
+    border-radius: 5px;
+    outline-color:rgb(45, 179, 152) ;
+    width: 80%;
+}
+button{
+    margin-top: 20px;
+    padding: 7px;
+    background-color: rgb(129, 111, 207) ;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(111, 76, 240) ;
+}
+.error{
+    background-color: rgb(201, 17, 17); 
+    border: 1px solid  rgb(218, 1, 1);
+}
+.circleCrossNombre, .circleCrossCelular, .circleCrossCorreo{
+    color: rgb(161, 52, 52);
+}
+
+.ocultar{
+    display: none;
+    visibility: hidden;
+}
+
+.mensajeNombre, .mensajeCelular, .mensajeCorreo{
+    color: rgb(161, 52, 52);
+    font-size: small;
+}
+
+.circleCheckNombre, .circleCheckCelular, .circleCheckCorreo{
+    color: rgb(86, 178, 192)
+}
+
+.correcto{
+    background-color: rgb(115, 255, 0); 
+    border: 1px solid  rgb(59, 179, 16);
+}
+h1{
+    align-items: center;
+    border-top: 25px;
+}
