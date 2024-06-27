@@ -35,3 +35,7 @@ tr:nth-child(odd){
     width: 40%;
 
 }
+h1{
+    text-align: center;
+    border-top: 45;
+}
