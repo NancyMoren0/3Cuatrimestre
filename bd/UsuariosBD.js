@@ -44,13 +44,13 @@ class UsuarioBD extends ConectarBD{
           console.log(sql);  
         }
     }
-    async editarUsuario(usuario){
-        const sql="UPDATE usuario SET nombre='"+usuario.nombre+"',celular='"+usuario.celular+"',correo='"+usuario.correo+"';"
+    async editarUsuario(usuario1){
+        const sql="UPDATE usuario SET nombre='"+usuario1.nombre+"',celular='"+usuario1.celular+"',correo='"+usuario1.correo+"';"
         const sql2=`UPDATE usuario SET 
-        nombre='${usuario.nombre}',
-        celular='${usuario.celular}',
-        correo='${usuario.correo}'
-        WHERE idusuario=${usuario.idusuario};`;
+        nombre='${usuario1.nombre}',
+        celular='${usuario1.celular}',
+        correo='${usuario1.correo}'
+        WHERE idusuario=${usuario1.idusuario};`;
         try {
             await this.conectarMysql();
             await this.conexion.execute(sql2)
