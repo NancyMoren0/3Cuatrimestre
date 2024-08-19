@@ -42,10 +42,12 @@ ruta.get("/editarUsuario/:idusuario",async(req,res)=>{
     try {
         const usuariobd= new UsuarioBD();
         const usuario= await usuariobd.usuarioId(req.params.idusuario);
-        console.log(usuario);
+        //console.log(usuario);
         res.render("editarUsuario", usuario)
     } catch (error) {
-        
+        console.log(error);
+        res.end();
+    
     }
    
 
@@ -55,7 +57,7 @@ ruta.get("/editarUsuario/:idusuario",async(req,res)=>{
 ruta.post("/editarUsuario",async(req,res)=>{
     try {
         const usuariobd=new UsuarioBD();
-        await usuariobd.EditarUsuario(req.body); 
+        await usuariobd.editarUsuario(req.body); 
         console.log("Usuario editado correctamente");
         res.redirect("/"); 
     } catch (error) {

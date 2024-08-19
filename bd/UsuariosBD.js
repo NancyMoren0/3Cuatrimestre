@@ -48,7 +48,7 @@ class UsuarioBD extends ConectarBD{
         const sql=
     "UPDATE usuario SET nombre='"+usuario.nombre+"',celular='"+usuario.celular+
     "',correo='"+usuario.correo+"';"
-    const sql2=`UPDATE usuario SET fv
+    const sql2=`UPDATE usuario SET 
     nombre='${usuario.nombre}',
     celular='${usuario.celular}',
     correo='${usuario.correo}'
