@@ -13,6 +13,7 @@
     <h1>Registro de datos</h1>
     <div class="contenedor">
         <form action="/editar" method="post" id="formulario">
+            <label for="celular">Nombre: </label><span class="ocultar mensajeCelular">Nombre no válido</span>
             <input value=<%= idusuario%> name="idUsuario" id="idUsuario" type="hidden"> 
             <input value=<%= nombre%> autofocus name="nombre" id="nombre" type="text" placeholder="Nombre">
             <i class="ocultar circleCrossNombre fa-regular fa-circle-xmark"></i>
@@ -31,7 +32,6 @@
             <button type="submit">Guardar datos</button>
         </form>
     </div>
-    <p>prueba</p>
-    <a href="mostrarUsuarios.ejs">REGISTRO DE USUARIOS</a>
+    
 </body>
 </html>
