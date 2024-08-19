@@ -13,8 +13,9 @@
     <h1>Registro de datos</h1>
     <div class="contenedor">
         <form action="/editar" method="post" id="formulario">
-            <label for="nombre">Nombre: </label><span class="ocultar mensajeCelular">Nombre no válido</span>
             <input value=<%= idusuario%> name="idUsuario" id="idUsuario" type="hidden"> 
+
+            <label for="nombre">Nombre: </label><span class="ocultar mensajeNombre">Nombre no válido</span>
             <input value=<%= nombre%> autofocus name="nombre" id="nombre" type="text" placeholder="Nombre">
             <i class="ocultar circleCrossNombre fa-regular fa-circle-xmark"></i>
             <i class="ocultar circleCheckNombre fa-regular fa-circle-check"></i>
@@ -26,7 +27,6 @@
 
             <label for="correo">Correo: </label><span class="ocultar mensajeCorreo">Correo no válido</span>
             <input value=<%= correo%> autofocus name="correo" id="correo" type="text" placeholder="Correo">
-
             <i class="ocultar circleCrossCorreo fa-regular fa-circle-xmark"></i>
             <i class="ocultar circleCheckCorreo fa-regular fa-circle-check"></i>
             <button type="submit">Guardar datos</button>
