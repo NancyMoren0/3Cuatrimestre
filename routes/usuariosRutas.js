@@ -52,7 +52,7 @@ ruta.get("/editarUsuario/:idusuario",async(req,res)=>{
 });
 
 
-ruta.post("/editar",async(req,res)=>{
+ruta.post("/editarUsuario",async(req,res)=>{
     try {
         const usuariobd=new UsuarioBD();
         await usuariobd.EditarUsuario(req.body); 
