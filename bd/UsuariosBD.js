@@ -36,26 +36,32 @@ class UsuarioBD extends ConectarBD{
             await this.conectarMySql();
             const [[usuario]]=await this.conexion.execute(sql);
             await this.cerrarConexion();
-            return usuario;
+           
             console.log("Consulta correcta por id");
+            return usuario;
         } catch (error) {
           console.log("Error al consultar por id"+error);
           console.log(sql);  
         }
     }
-    async EditarUsuario(usuario) {
-        const sql="update usuario set nombre='"+usuario.nombre+"' , celular= '"+usuario.celular+"' ,  correo='"+usuario.correo+"' where idusuario='"+usuario.idusuario+"' ;";
-        const sql2=`update usuario set nombre='${usuario.nombre}' , celular='${usuario.celular}' ,  correo='${usuario.correo}' ;" ` 
+    async editarUsuario(usuario){
+        const sql="UPDATE usuario SET nombre='"+usuario.nombre+"',celular='"+usuario.celular+"',correo='"+usuario.correo+"';"
+        const sql2=`UPDATE usuario SET 
+        nombre='${usuario.nombre}',
+        celular='${usuario.celular}',
+        correo='${usuario.correo}'
+        WHERE idusuario=${usuario.idusuario};`;
         try {
-            await this.conectarMySql();
-            await this.conexion.execute(sql);
+            await this.conectarMysql();
+            await this.conexion.execute(sql2)
             await this.cerrarConexion();
-            console.log("Actualización de usuario exitosa");
+            console.log("Actualizacion correcta del usuario ");
         } catch (error) {
-            console.error("Error al actualizar los datos de los usuarios" + error);
-            console.error(sql);
+            console.error("Error al editar usuario "+ error);
+            console.error(sql2);
+            
         }
-    }
+      }
 
     async BorrarUsuario(idusuario){
         const sql="delete from usuario where idUsuario="+idusuario+ ";";
