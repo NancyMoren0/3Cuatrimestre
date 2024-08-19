@@ -13,7 +13,7 @@ class UsuarioBD extends ConectarBD{
         await this.cerrarConexion();
     }catch (error) {
         console.log("Error al agregar usuario "+error);
-        console.error(sql);    
+           
         }
     }
     async mostrarUsuarios() {
@@ -23,7 +23,7 @@ class UsuarioBD extends ConectarBD{
             const [UsuariosMySql]=await this.conexion.execute(sql);
             await this.cerrarConexion();
             console.log("Los datos se obtuvieron correctamente");
-            console.log(UsuariosMySql);
+            
             return(UsuariosMySql);
         } catch (error) {
             console.error("Error al obtener los datos de los usuarios" + error);
@@ -44,21 +44,22 @@ class UsuarioBD extends ConectarBD{
           console.log(sql);  
         }
     }
-    async editarUsuario(usuario1){
-        const sql="UPDATE usuario SET nombre='"+usuario1.nombre+"',celular='"+usuario1.celular+"',correo='"+usuario1.correo+"';"
+    async editarusuario(usuario){
+        const sql="UPDATE usuario SET nombre='"+usuario.nombre+"',celular='"+usuario.celular+
+        "',correo='"+usuario.correo+"';"
         const sql2=`UPDATE usuario SET 
-        nombre='${usuario1.nombre}',
-        celular='${usuario1.celular}',
-        correo='${usuario1.correo}'
-        WHERE idusuario=${usuario1.idusuario};`;
+        nombre='${usuario.nombre}',
+        celular='${usuario.celular}',
+        correo='${usuario.correo}'
+        WHERE idusuario=${usuario.idusuario};`;
         try {
-            await this.conectarMysql();
-            await this.conexion.execute(sql)
+            await this.conectarMySql();
+            await this.conexion.execute(sql2)
             await this.cerrarConexion();
             console.log("Actualizacion correcta del usuario ");
         } catch (error) {
             console.error("Error al editar usuario "+ error);
-            console.error(sql);
+            console.error(sql2);
             
         }
       }
