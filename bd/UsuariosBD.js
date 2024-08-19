@@ -53,7 +53,7 @@ class UsuarioBD extends ConectarBD{
         WHERE idusuario=${usuario.idusuario};`;
         try {
             await this.conectarMysql();
-            await this.conexion.execute(sql2)
+            await this.conexion.execute(sql)
             await this.cerrarConexion();
             console.log("Actualizacion correcta del usuario ");
         } catch (error) {

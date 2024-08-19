@@ -13,7 +13,7 @@
     <h1>Registro de datos</h1>
     <div class="contenedor">
         <form action="/editarUsuario" method="post" id="formulario">
-            <input value=<%= idusuario%> name="idUsuario" id="idUsuario" type="hidden"> 
+            <input value=<% idusuario%> name="idUsuario" id="idUsuario" type="hidden"> 
 
             <label for="nombre">Nombre: </label><span class="ocultar mensajeNombre">Nombre no válido</span>
             <input value=<%= nombre%> autofocus name="nombre" id="nombre" type="text" placeholder="Nombre">
@@ -29,7 +29,7 @@
             <input value=<%= correo%> autofocus name="correo" id="correo" type="text" placeholder="Correo">
             <i class="ocultar circleCrossCorreo fa-regular fa-circle-xmark"></i>
             <i class="ocultar circleCheckCorreo fa-regular fa-circle-check"></i>
-            <button type="submit">Guardar datos</button>
+            <button type="submit">Guardar</button>
         </form>
     </div>
     
