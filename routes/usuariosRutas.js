@@ -68,6 +68,7 @@ ruta.get("/BorrarUsuario/:id",async(req,res)=>{
         const usuariobd=new UsuarioBD();
          await usuariobd.BorrarUsuario(req.params.id);
          res.redirect("/");
+         console.log("Usuario eliminado correctamente");
     } catch (error) {
         console.log(error);
     }
