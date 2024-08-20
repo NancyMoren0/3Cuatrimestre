@@ -12,11 +12,14 @@
     margin-top: 35px;
     margin-bottom: 35px;
 }
+.b{
+    margin-left: 85px;
+}
 
 form{
     margin-top: 20px;
     width: 300px;
-    box-shadow: 0 0 12px rgb(91, 90, 197);
+    box-shadow: 0 0 30px rgba(131, 90, 197, 0.836);
     padding: 30px;
     border-radius: 7px;
 }
@@ -30,10 +33,10 @@ input{
     margin-bottom: 15px;
     margin-top: 5px;
     padding: 7px;
-    background-color: rgb(206, 230, 225);
+    background-color: rgb(215, 206, 230);
     border: 0px;
     border-radius: 5px;
-    outline-color:rgb(45, 179, 152) ;
+    outline-color:rgba(85, 45, 179, 0.856) ;
     width: 80%;
 }
 button{
