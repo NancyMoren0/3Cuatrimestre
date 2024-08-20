@@ -10,6 +10,9 @@ form{
     padding: 30px;
     border-radius: 7px;
 }
+.u{
+    margin-top: 35px;
+}
 
 .contenedor{
     display: flex;
